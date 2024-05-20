@@ -1,0 +1,43 @@
+.last_part{
+    text-align: center;
+}
+
+.last_part h2{
+    color: #202020;
+text-align: center;
+font-family: "Zen Maru Gothic";
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 57.6px */
+letter-spacing: 1.8px;
+margin: 60px 0;
+}
+
+.last_part p{
+    color: #202020;
+text-align: center;
+font-family: "Zen Maru Gothic";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%;
+letter-spacing: 1px;
+margin: 60px 0;
+}
+
+.last_part button{
+    color: var(--green1, #a3b091);
+        font-family: "Zen Maru Gothic";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 24px */
+        letter-spacing: 0.75px;
+        padding: 3px 10px;
+        border-radius: 30px;
+        border: 2px solid var(--green1, #a3b091);
+        background-color: transparent;
+        margin: 50px auto;
+        width: fit-content;
+}

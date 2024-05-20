@@ -1,0 +1,755 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #eef3e9;
+}
+
+/* ==========Navbar starts =========== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav h2 {
+  color: var(--white, #000);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Zen Maru Gothic";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 57.6px */
+}
+nav h2 a {
+  color: var(--white, #000);
+}
+.list {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.list .stick {
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+}
+.list ul {
+  display: flex;
+  gap: 32px;
+}
+.list ul li a {
+  color: #000;
+  text-align: center;
+  font-family: "Poly";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 32px */
+}
+.list button {
+  padding: 4px 24px;
+  border-radius: 400px;
+  background-color: #000;
+  border: none;
+  color: #fff;
+}
+
+.off_screen__menu {
+  background-color: #a3b091;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  transition: 0.3s ease;
+  right: -450px;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+
+.off_screen__menu button {
+  padding: 4px 24px;
+  border-radius: 400px;
+  background-color: #000;
+  border: none;
+  color: white;
+}
+
+.off_screen__menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+}
+.off_screen__menu ul li a {
+  color: #000;
+  text-align: center;
+  font-family: "Poly";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.off_screen__menu.active {
+  right: 0;
+}
+
+.burger {
+  width: 50px;
+  height: 50px;
+  display: none;
+  margin-left: auto;
+  position: relative;
+  padding: 5px;
+}
+.dashes {
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.dashes:nth-child(1) {
+  top: 25%;
+}
+.dashes:nth-child(3) {
+  top: 75%;
+}
+
+.burger.active .dashes:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.burger.active .dashes:nth-child(2) {
+  opacity: 0;
+}
+.burger.active .dashes:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+@media (max-width: 1440px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  .burger {
+    display: block;
+  }
+  /* .navbar .container {
+    width: 80%;
+  } */
+  .list {
+    display: none;
+  }
+}
+/* ========== Navbar ends ======== */
+
+/* ============= Main pic starts ================= */
+
+.main_pic {
+  height: 70vh;
+  border-radius: 60px;
+  background-image: url("../images/mainpic.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 900px) {
+  .main_pic {
+    height: 50vh;
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .main_pic {
+    height: 40vh;
+  }
+}
+/* ============ Main pic ends ============== */
+
+/* ============= Notice starts here ============ */
+.notice {
+  margin: 50px auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.notice h1 {
+  color: var(--black, #09122b);
+  font-family: "Zen Maru Gothic";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 76.8px */
+  letter-spacing: 2.4px;
+  text-align: center;
+}
+
+.notice_right {
+  width: 100%;
+}
+.notice_right ul li {
+  width: 100%;
+  padding: 16px 24px;
+  border-bottom: 0.5px solid #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice_right ul li p span {
+  color: var(--gray_2, #908f8f);
+  font-family: "Hina Mincho";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+
+.notice_right ul li p button {
+  color: #4d4d4d;
+  font-family: "Hina Mincho";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+  padding: 3px 10px;
+  border: 0.5px solid #4d4d4d;
+  background-color: transparent;
+  margin: 0 18px;
+}
+
+.notice_right ul li p {
+  color: var(--text_gray, #4d4d4d);
+  font-family: "Hina Mincho";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+
+.notice_right + button {
+  color: var(--green1, #a3b091);
+
+  /* pop2 */
+  font-family: "Zen Maru Gothic";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 24px */
+  letter-spacing: 0.75px;
+  padding: 3px 10px;
+  border-radius: 30px;
+  border: 2px solid var(--green1, #a3b091);
+  background-color: transparent;
+}
+
+@media (max-width: 760px) {
+  .notice {
+    flex-direction: column;
+    gap: 50px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+  .notice_right ul li span {
+    display: block;
+    text-align: center;
+  }
+  .notice_right ul li button {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* ============= Notice ends here ============= */
+
+/* =============== About starts here =========== */
+
+.about h2 {
+  color: var(--black, #09122b);
+  text-align: center;
+  font-family: "Zen Maru Gothic";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 76.8px */
+  letter-spacing: 2.4px;
+}
+
+.about .top_about {
+  display: flex;
+  justify-content: space-between;
+  margin: 45px 100px;
+}
+
+.about .image {
+  width: 321px;
+  height: 248px;
+  border-radius: 60px;
+  background: url("../images/mainpic.png") lightgray -155.362px -51.548px /
+    272.513% 176.759% no-repeat;
+}
+
+.top_about p {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .about .top_about {
+    margin: 45px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .about .top_about {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .about .bottom {
+    flex-direction: column-reverse;
+  }
+  .top_about p {
+    width: 60%;
+  }
+}
+
+@media (max-width: 550px) {
+  .top_about p {
+    width: 90%;
+  }
+  .about h2 {
+    font-size: 32px;
+  }
+  .about .image {
+    width: 300px;
+    height: 220px;
+    border-radius: 60px;
+    background: url("../images/mainpic.png") lightgray -155.362px -51.548px /
+      272.513% 176.759% no-repeat;
+  }
+}
+
+/* =============== About ends here ============= */
+
+/* ================= Three pic starts here ================ */
+.three_pic {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 50px;
+}
+.three_pic .img {
+  width: 30%;
+  max-width: 321px;
+  height: 184px;
+  background: url("../images/mainpic.png") lightgray -155.362px -51.548px /
+    272.513% 238.241% no-repeat;
+}
+@media (max-width: 1024px) {
+  .three_pic .img {
+    height: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .three_pic {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 80px 0;
+  }
+  .three_pic .img {
+    width: 100%;
+    height: 184px;
+  }
+}
+@media (max-width: 470px) {
+  .three_pic .img {
+    height: 150px;
+  }
+}
+/* ==================  Three pic ends here ============ */
+
+/* ================== Menu sec starts here ============= */
+
+.menu h2 {
+  color: #09122b;
+  text-align: center;
+  font-family: "Zen Maru Gothic";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 2.4px;
+}
+
+.menu_box {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 40px;
+  margin: 50px auto;
+}
+
+.card {
+  width: 240px;
+}
+.card .img {
+  width: 100%;
+  height: 135px;
+  border-radius: 15px;
+  background: url("../images/mainpic.png") lightgray -105.533px -35.034px /
+    249.666% 219.067% no-repeat;
+}
+.card h3 {
+  color: #000;
+  font-family: "Zen Maru Gothic";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.75px;
+  margin: 5px 0;
+}
+.card .line {
+  display: inline-block;
+  width: 100%;
+  border: 0.5px solid black;
+}
+
+.card p {
+  color: #000;
+  font-family: "Zen Maru Gothic";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.75px;
+}
+
+@media (max-width: 1440px) {
+  .menu_box {
+    width: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .menu_box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .menu_box {
+    width: 90%;
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .menu_box {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= Menu sec ends  here ================ */
+
+/* ================= Access sec starts here ============= */
+
+.access {
+  display: flex;
+  gap: 50px;
+}
+.access .map {
+  width: 40%;
+  text-align: center;
+}
+.map h3 {
+  color: var(--black, #09122b);
+  font-family: "Zen Maru Gothic";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 2.4px;
+}
+
+.access .price {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.price_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.item_name {
+  color: var(--gray_2, #908f8f);
+  font-family: "Oooh Baby";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.item_name + p {
+  color: var(--black, #09122b);
+  text-align: center;
+  font-family: "Oooh Baby";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+@media (max-width: 1024px) {
+  .access .map {
+    width: 50%;
+  }
+  .access .map iframe {
+    height: 350px;
+  }
+  .access .price {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .access {
+    flex-direction: column;
+  }
+  .access .map {
+    width: 100%;
+  }
+  .access .map iframe {
+    height: 450px;
+  }
+  .access .price {
+    width: 100%;
+  }
+}
+
+/* ================== Access sec ends here ============= */
+
+/* ================== Reservation starts here ========== */
+
+.reservation {
+  width: 80%;
+  display: flex;
+  gap: 45px;
+  flex-direction: column;
+  margin: 50px auto;
+  align-items: center;
+}
+
+.reservation h2 {
+  color: var(--Black, #000);
+  font-family: "Zen Maru Gothic";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 2.4px;
+}
+.reservation h3 {
+  width: 80%;
+  color: var(--Black, #000);
+  text-align: center;
+  font-family: "Zen Maru Gothic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+
+.reservation ul {
+  display: flex;
+  gap: 32px;
+}
+
+.reservation ul li {
+  padding: 4px 24px;
+  width: 250px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 16px;
+  border: 1px solid #000;
+  color: #000;
+  font-family: "Zen Maru Gothic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 1px;
+}
+
+.reservation form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+.reservation form .name_email {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.reservation form .name_email input {
+  display: inline-block;
+  width: 45%;
+  padding: 15px 0;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.reservation textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 80%;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.reservation button {
+  padding: 5px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .reservation {
+    width: 100%;
+  }
+  .reservation form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .reservation {
+    width: 100%;
+  }
+  .reservation form {
+    width: 90%;
+  }
+  .reservation h3 {
+    width: 90%;
+  }
+  .reservation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .reservation {
+    width: 100%;
+  }
+  .reservation form .name_email {
+    flex-direction: column;
+    align-items: center;
+  }
+  .reservation form .name_email input {
+    width: 100%;
+  }
+  .reservation h2 {
+    font-size: 32px;
+  }
+}
+
+/* ================== Reservation ends here ============ */
+
+/* ==============Footer starts =============== */
+
+footer {
+  background-color: #a3b091;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+footer ul {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 100px 100px 100px 100px;
+  text-align: center;
+}
+
+footer h3 {
+  color: var(--Black, #000);
+  text-align: center;
+  font-family: "Shippori Mincho B1";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+footer ul li {
+  color: #000;
+  text-align: center;
+  font-family: "Shippori Mincho B1";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+@media(max-width: 600px){
+  footer ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* =============== Footer ends =============== */
