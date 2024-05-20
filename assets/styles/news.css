@@ -1,0 +1,115 @@
+.main_pic{
+    height: 30vh;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_pic h2{
+    color: var(--white, #FFF);
+font-family: "Zen Maru Gothic";
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 76.8px */
+letter-spacing: 2.4px;
+}
+
+/* ============= Notice starts here ============ */
+.notice {
+    margin: 50px auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .notice h1 {
+    color: var(--black, #09122b);
+    font-family: "Zen Maru Gothic";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 76.8px */
+    letter-spacing: 2.4px;
+    text-align: center;
+  }
+  
+  .notice_right {
+    width: 100%;
+  }
+  .notice_right ul li {
+    width: 100%;
+    padding: 16px 24px;
+    border-bottom: 0.5px solid #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .notice_right ul li p span {
+    color: var(--gray_2, #908f8f);
+    font-family: "Hina Mincho";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+  
+  .notice_right ul li p button {
+    color: #4d4d4d;
+    font-family: "Hina Mincho";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+    padding: 3px 10px;
+    border: 0.5px solid #4d4d4d;
+    background-color: transparent;
+    margin: 0 18px;
+  }
+  
+  .notice_right ul li p {
+    color: var(--text_gray, #4d4d4d);
+    font-family: "Hina Mincho";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+  
+  .notice_right + button {
+    font-family: "Zen Maru Gothic";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 24px */
+    letter-spacing: 0.75px;
+    padding: 3px 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+  }
+  
+  @media (max-width: 760px) {
+    .notice {
+      flex-direction: column;
+      gap: 50px;
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .notice_right ul li span {
+      display: block;
+      text-align: center;
+    }
+    .notice_right ul li button {
+      display: block;
+      text-align: center;
+    }
+  }
+  
+  /* ============= Notice ends here ============= */
+  
