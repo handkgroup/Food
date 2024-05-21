@@ -21,6 +21,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  max-width: 1040px;
 }
 
 nav h2 {
@@ -174,6 +175,8 @@ nav h2 a {
 
 .main_pic {
   height: 70vh;
+  max-height: 547px;
+  max-width: 1040px;
   border-radius: 60px;
   background-image: url("../images/mainpic.png");
   background-repeat: no-repeat;
@@ -198,6 +201,7 @@ nav h2 a {
 .notice {
   margin: 50px auto;
   width: 70%;
+  max-width: 1040px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -309,16 +313,19 @@ nav h2 a {
 
 .about .top_about {
   display: flex;
+  max-width: 1040px;
   justify-content: space-between;
-  margin: 45px 100px;
+  margin: 45px auto;
 }
 
 .about .image {
-  width: 321px;
+  width: 50%;
   height: 248px;
   border-radius: 60px;
   background: url("../images/mainpic.png") lightgray -155.362px -51.548px /
     272.513% 176.759% no-repeat;
+    background-position: center;
+    background-size: stretch;
 }
 
 .top_about p {
