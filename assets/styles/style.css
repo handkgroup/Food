@@ -16,6 +16,12 @@ body {
 }
 
 /* ==========Navbar starts =========== */
+.navbar{
+  position: sticky;
+  top: 0;
+  background-color: white;
+  opacity: .8;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -151,7 +157,7 @@ nav h2 a {
 }
 .burger.active .dashes:nth-child(3) {
   top: 50%;
-  transform: translate(-50%, 50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 @media (max-width: 1440px) {
   .container {
@@ -167,6 +173,11 @@ nav h2 a {
   } */
   .list {
     display: none;
+  }
+}
+@media(min-width:900px){
+  .off_screen__menu.active {
+    right: -450px;
   }
 }
 /* ========== Navbar ends ======== */
@@ -320,7 +331,7 @@ nav h2 a {
 
 .about .image {
   width: 50%;
-  height: 248px;
+  height: 330px;
   border-radius: 60px;
   background: url("../images/mainpic.png") lightgray -155.362px -51.548px /
     272.513% 176.759% no-repeat;
@@ -330,10 +341,17 @@ nav h2 a {
 
 .top_about p {
   width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  color: var(--black, #09122B);
+text-align: center;
+font-family: "Zen Maru Gothic";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 32px */
+letter-spacing: 1px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 @media (max-width: 1024px) {
@@ -348,11 +366,15 @@ nav h2 a {
     align-items: center;
     gap: 50px;
   }
+  .about .image{
+    width: 100%;
+    max-height: 400px;
+  }
   .about .bottom {
     flex-direction: column-reverse;
   }
   .top_about p {
-    width: 60%;
+    width: 90%;
   }
 }
 
@@ -364,11 +386,8 @@ nav h2 a {
     font-size: 32px;
   }
   .about .image {
-    width: 300px;
-    height: 220px;
-    border-radius: 60px;
-    background: url("../images/mainpic.png") lightgray -155.362px -51.548px /
-      272.513% 176.759% no-repeat;
+    width: 90%;
+    max-height: 220px;
   }
 }
 
@@ -378,7 +397,8 @@ nav h2 a {
 .three_pic {
   display: flex;
   justify-content: space-between;
-  padding: 80px 50px;
+  padding: 80px 0;
+  max-width: 1040px;
 }
 .three_pic .img {
   width: 30%;
@@ -412,7 +432,11 @@ nav h2 a {
 /* ==================  Three pic ends here ============ */
 
 /* ================== Menu sec starts here ============= */
-
+.menu{
+  width: 90%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
 .menu h2 {
   color: #09122b;
   text-align: center;
@@ -425,23 +449,26 @@ nav h2 a {
 }
 
 .menu_box {
-  width: 60%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  gap: 40px;
+  gap: 30px;
   margin: 50px auto;
 }
 
 .card {
-  width: 240px;
+  max-width: 321px;
+  width: 100%;
+  /* height: 187px; */
 }
 .card .img {
   width: 100%;
-  height: 135px;
+  height: 187px;
   border-radius: 15px;
   background: url("../images/mainpic.png") lightgray -105.533px -35.034px /
     249.666% 219.067% no-repeat;
+    background-position: center;
 }
 .card h3 {
   color: #000;
@@ -469,11 +496,6 @@ nav h2 a {
   letter-spacing: 0.75px;
 }
 
-@media (max-width: 1440px) {
-  .menu_box {
-    width: 80%;
-  }
-}
 @media (max-width: 1024px) {
   .menu_box {
     grid-template-columns: 1fr 1fr;
@@ -498,9 +520,11 @@ nav h2 a {
 .access {
   display: flex;
   gap: 50px;
+  max-width: 1040px;
+  margin: 50px auto;
 }
 .access .map {
-  width: 40%;
+  width: 45%;
   text-align: center;
 }
 .map h3 {
@@ -511,10 +535,11 @@ nav h2 a {
   font-weight: 400;
   line-height: 160%;
   letter-spacing: 2.4px;
+  margin-bottom: 30px;
 }
 
 .access .price {
-  width: 60%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -578,11 +603,18 @@ nav h2 a {
 /* ================== Reservation starts here ========== */
 
 .reservation {
-  width: 80%;
+  width: 100%;
+  background-color: white;
+}
+
+.reserv_container{
+  width: 90%;
+  max-width: 1040px;
   display: flex;
   gap: 45px;
   flex-direction: column;
-  margin: 50px auto;
+  margin: 0 auto;
+  padding: 50px 0;
   align-items: center;
 }
 
